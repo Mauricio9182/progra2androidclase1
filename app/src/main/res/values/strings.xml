@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Progra2ANDROID</string>
+    <string name="tvSaludo">hola chupapi</string>
+    <string name="btnSaludo">enviar saludo</string>
+    <string name="btnCreardb">Crear DB</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_telefono">Teléfono</string>
+    <string name="hint_email">Email</string>
+    <string name="btnGuardar">Guardar</string>
+    <string name="btnCrearRegistro">Crear Registro</string>
+    <string name="btnCrearDB">Crear Base de Datos</string>
+</resources>
