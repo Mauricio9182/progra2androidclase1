@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Progra2ANDROID" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.P2c1" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.Progra2ANDROID" parent="Base.Theme.Progra2ANDROID" />
+    <style name="Theme.P2c1" parent="Base.Theme.P2c1" />
 </resources>

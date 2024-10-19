@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Progra2ANDROID</string>
-    <string name="tvSaludo">hola chupapi</string>
-    <string name="btnSaludo">enviar saludo</string>
-    <string name="btnCreardb">Crear DB</string>
+    <string name="app_name">p2c1</string>
+    <string name="tvSaludo">Hola Mundo!</string>
+    <string name="btnSaludo">Click para Saludar</string>
+    <string name="btnCrearDb">Crear DB</string>
     <string name="hint_nombre">Nombre</string>
     <string name="hint_telefono">Teléfono</string>
     <string name="hint_email">Email</string>
