@@ -1,4 +1,4 @@
-package gt.edu.umg.p2c1.BaseDatos;
+package BaseDatos;
 
 import android.content.ContentValues;
 import android.content.Context;

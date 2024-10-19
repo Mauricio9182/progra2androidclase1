@@ -13,13 +13,13 @@
         android:id="@+id/tvSaludo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginTop="32dp"
+        android:text="hola como estan todos?"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/btnSaludo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="32dp"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnSaludo"

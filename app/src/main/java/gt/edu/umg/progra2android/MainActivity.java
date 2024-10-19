@@ -3,6 +3,7 @@ package gt.edu.umg.progra2android;
 import static android.app.ProgressDialog.show;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.Button;
@@ -15,40 +16,58 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import BaseDeDatos.DBHelper;
+import BaseDatos.DbHelper;
 
 public class MainActivity extends AppCompatActivity {
-Button btmsaludar, btnCreardb;
-TextView tvSaludar;
-    @SuppressLint("MissingInflatedId")
+
+    Button btnSaludo, btnCrearDb, btnCrearRegistro;
+    TextView tvSaludo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        btmsaludar=findViewById(R.id.btmsaludar);
-        tvSaludar=findViewById(R.id.tvSaludo);
-        btnCreardb=findViewById(R.id.btnCreardb);
+        //Codigo nuevo
+        btnSaludo = findViewById(R.id.btnSaludo);
+        tvSaludo = findViewById(R.id.tvSaludo);
+        btnCrearDb = findViewById(R.id.btnCrearDb);
+        btnCrearRegistro = findViewById(R.id.btnCrearRegistro);
 
-        btmsaludar = findViewById(R.id.btmsaludar);
-        tvSaludar = findViewById(R.id.tvSaludo);
-        btmsaludar.setOnClickListener(v ->{
-                Toast.makeText(this, "hola pablo", Toast.LENGTH_SHORT).show();
-                tvSaludar.setText("hola pablo");;
-        });
-        btnCreardb.setOnClickListener(v ->{
-            DBHelper dbHelper = new DBHelper(this);
+        //Crear db
+
+        btnCrearDb.setOnClickListener(v ->{
+
+            //Crear base de datos
+
+            DbHelper dbHelper = new DbHelper(this);
             dbHelper.getWritableDatabase();
             SQLiteDatabase db = dbHelper.getWritableDatabase();
-            if (db!=null){
-                Toast.makeText(this, "DB Creada!", Toast.LENGTH_SHORT).show();
-            }
-            else {
-                Toast.makeText(this, "Error al crear DB!", Toast.LENGTH_SHORT).show();
+
+            if(db != null)
+            {
+                Toast.makeText(this,"Creando base de datos", Toast.LENGTH_SHORT).show();
+                tvSaludo.setText("Creando base de datos");
+            }else{
+                Toast.makeText(this,"Error al crear base de datos", Toast.LENGTH_SHORT).show();
+                tvSaludo.setText("Error al crear base de datos");
             }
         });
 
+        //crear registro llama a la activity NuevoActivity FALTA CREAR Y REFERENCIAR EL BOTON
+
+        btnCrearRegistro.setOnClickListener(v -> {
+            Toast.makeText(this, "Creando Registro", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, NuevoActivity.class);
+            startActivity(intent);
+
+        });
+
+        btnSaludo.setOnClickListener(v ->{
+            Toast.makeText(this,"Aviso karlita", Toast.LENGTH_SHORT).show();
+            tvSaludo.setText("Hola Karlita");
+        });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
